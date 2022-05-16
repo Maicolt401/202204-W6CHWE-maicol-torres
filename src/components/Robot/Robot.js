@@ -1,5 +1,6 @@
 import styled from "styled-components";
-const Robot = ({ name, yearCreation, image, energy }) => {
+
+const Robot = ({ robot: { img, name, yearCreation } }) => {
   const Div = styled.div`
     background-color: grey;
     border: 2px solid red;
@@ -10,19 +11,16 @@ const Robot = ({ name, yearCreation, image, energy }) => {
     color: black;
     align-items: flex-start;
     border-radius: 20px;
-  `;
-  const H1 = styled.h1`
-    color: white;
+    img {
+    }
   `;
 
   return (
     <>
-      <H1>Information To Robots</H1>
       <Div>
-        <img src={image} alt="Robot" />
+        <img src={img} alt="Robot" />
         <p>Name: {name}</p>
         <p>Year to Creation: {yearCreation}</p>
-        <p>Energy: {energy} </p>
         <button>Kill the Robot</button>
       </Div>
     </>
