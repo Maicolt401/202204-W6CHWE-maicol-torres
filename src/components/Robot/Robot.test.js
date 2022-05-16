@@ -8,9 +8,10 @@ describe("Given the Robot component", () => {
     test("Then it should render a img", () => {
       render(
         <Provider store={store}>
-          <Robot />
+          <Robot robot={Robot} />
         </Provider>
       );
+
       const expectedResult = screen.getByRole("img");
 
       expect(expectedResult).toBeInTheDocument();
