@@ -1,9 +1,9 @@
-import Robot from "./components/Robot/Robot";
+import RobotList from "./components/RobotList/RobotList";
 
 function App() {
   return (
     <>
-      <Robot />
+      <RobotList />
     </>
   );
 }
