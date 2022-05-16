@@ -17,7 +17,7 @@ const Robot = ({ name, yearCreation, image, energy }) => {
 
   return (
     <>
-      <H1>Information to Robots</H1>
+      <H1>Information To Robots</H1>
       <Div>
         <img src={image} alt="Robot" />
         <p>Name: {name}</p>
