@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import loginThunk from "../../redux/thunks/userThunk";
 
 const Form = () => {
   const StructureForm = styled.section`
@@ -60,13 +63,36 @@ const Form = () => {
     display: flex;
     justify-content: center;
   `;
+
+  // const [formData, setData] = useState();
+
+  // const [buttonDisable, setButtonDisable] = useState(true);
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   if (formData.username !== "" && formData.password !== "") {
+  //     setButtonDisable(false);
+  //   } else {
+  //     setButtonDisable(true);
+  //   }
+  // }, [formData]);
+
+  // const changeData = (event) => {
+  //   setData({ ...formData, [event.target.id]: event.target.value });
+  // };
+
+  // const submitLogin = (event) => {
+  //   event.preventDefault();
+  //   dispatch(loginThunk(formData));
+  // };
+
   return (
     <>
       <H1>My Robotpedia</H1>
       <StructureForm>
-        <div disabel="off" class="login-page">
-          <div class="form">
-            <form class="login-form" autoComplete="off">
+        <div disabel="off" className="login-page">
+          <div className="form">
+            <form className="login-form" autoComplete="off">
               <label htmlFor="username" />
               <input type="text" placeholder="username" />
               <label htmlFor="password" />
@@ -79,4 +105,5 @@ const Form = () => {
     </>
   );
 };
+
 export default Form;
