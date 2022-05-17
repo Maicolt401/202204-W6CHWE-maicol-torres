@@ -60,13 +60,14 @@ const Form = () => {
     display: flex;
     justify-content: center;
   `;
+
   return (
     <>
       <H1>My Robotpedia</H1>
       <StructureForm>
-        <div disabel="off" class="login-page">
-          <div class="form">
-            <form class="login-form" autoComplete="off">
+        <div disabel="off" className="login-page">
+          <div className="form">
+            <form className="login-form" autoComplete="off">
               <label htmlFor="username" />
               <input type="text" placeholder="username" />
               <label htmlFor="password" />
@@ -79,4 +80,5 @@ const Form = () => {
     </>
   );
 };
+
 export default Form;
