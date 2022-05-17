@@ -8,7 +8,11 @@ const RobotList = (index, robot) => {
   const H1 = styled.h1`
     background-color: black;
     color: white;
-    border-radius: 25px;
+    margin-top: 0px;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
     display: flex;
     justify-content: center;
   `;
