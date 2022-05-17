@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import loginThunk from "../../redux/thunks/userThunk";
 
 const Form = () => {
   const StructureForm = styled.section`

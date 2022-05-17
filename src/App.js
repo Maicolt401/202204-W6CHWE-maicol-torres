@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Form from "./components/Form/Form.js";
 import RobotList from "./components/RobotList/RobotList";
 import { loginActionCreator } from "./redux/features/userSlice.js";
@@ -12,7 +12,7 @@ function App() {
     dispatch(loadRobotsThunk());
   }, [dispatch]);
 
-  const user = useSelector((state) => state.user);
+  // const user = useSelector((state) => state.user);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
