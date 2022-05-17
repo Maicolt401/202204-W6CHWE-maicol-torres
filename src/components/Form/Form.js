@@ -61,28 +61,6 @@ const Form = () => {
     justify-content: center;
   `;
 
-  // const [formData, setData] = useState();
-
-  // const [buttonDisable, setButtonDisable] = useState(true);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   if (formData.username !== "" && formData.password !== "") {
-  //     setButtonDisable(false);
-  //   } else {
-  //     setButtonDisable(true);
-  //   }
-  // }, [formData]);
-
-  // const changeData = (event) => {
-  //   setData({ ...formData, [event.target.id]: event.target.value });
-  // };
-
-  // const submitLogin = (event) => {
-  //   event.preventDefault();
-  //   dispatch(loginThunk(formData));
-  // };
-
   return (
     <>
       <H1>My Robotpedia</H1>
