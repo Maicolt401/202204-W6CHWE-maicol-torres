@@ -1,6 +1,9 @@
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { deleteRobotThunk } from "../../redux/thunks/robotsThunks";
+import Button from "../Button/Button";
 
-const Robot = ({ robot: { img, name, yearCreation } }) => {
+const Robot = ({ robot, robot: { img, name, yearCreation } }) => {
   const Div = styled.div`
     background-color: gold;
     border: 2px solid black;
@@ -31,7 +34,10 @@ const Robot = ({ robot: { img, name, yearCreation } }) => {
     flex-direction: row;
     justify-content: center;
   `;
-
+  const dispatch = useDispatch();
+  const deleteRobot = () => {
+    dispatch(deleteRobotThunk(robot._id));
+  };
   return (
     <>
       <RobotStyle>
@@ -39,7 +45,7 @@ const Robot = ({ robot: { img, name, yearCreation } }) => {
           <img src={img} alt="Robot" />
           <p>Name: {name}</p>
           <p>Year to Creation: {yearCreation}</p>
-          <button>Kill the Robot</button>
+          <Button action={deleteRobot} text="¿destruir este robot?" />
         </Div>
       </RobotStyle>
     </>
