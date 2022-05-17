@@ -15,6 +15,7 @@ const Robot = ({ robot, robot: { img, name, yearCreation } }) => {
     justify-content: center;
     border-radius: 20px;
     margin-top: 15px;
+    text-align: center;
     font-size: 20px;
     img {
       width: 100%;
@@ -45,7 +46,12 @@ const Robot = ({ robot, robot: { img, name, yearCreation } }) => {
           <img src={img} alt="Robot" />
           <p>Name: {name}</p>
           <p>Year to Creation: {yearCreation}</p>
-          <Button action={deleteRobot} text="¿destruir este robot?" />
+
+          <Button
+            action={deleteRobot}
+            type="submit"
+            text="¿destruir este robot?"
+          />
         </Div>
       </RobotStyle>
     </>
